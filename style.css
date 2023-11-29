@@ -1,0 +1,16 @@
+/* style.css */
+#adicionar {
+    background-color: #3f34db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  
+  
+  #adicionar:hover {
+    background-color: #2d259b;
+  }
