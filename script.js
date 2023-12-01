@@ -23,7 +23,14 @@ function adicionarTarefa() {
       `;
         listaTarefas.appendChild(novaTarefa);
         tarefaInput.value = "";
+        
     }
+    listaFinalizadas.addEventListener('mouseout', function (e) {
+        if (e.target.classList.contains('finalizar')) {
+            this.innerHTML = `${tarefaTexto} <button class="excluir">Excluir</button>` //não tá funcionando!!
+            this.style.color ='green'
+        }
+    })
 }
 
 
@@ -35,12 +42,15 @@ listaTarefas.addEventListener("click", function (e) {
         listaFinalizadas.appendChild(e.target.parentElement)
     }
 });
+
 listaFinalizadas.addEventListener("click", function (e) {
     if (e.target.classList.contains("excluir")) {
         e.target.parentElement.remove()
     }
-
+    
 })
+
+
 
 
 
