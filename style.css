@@ -1,16 +1,22 @@
-
 #adicionar {
-    background-color: #3f34db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-  }
-  
-  
-  #adicionar:hover {
-    background-color: #2d259b;
-  }
+  background-color: #3f34db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+
+#adicionar:hover {
+  background-color: #2d259b;
+}
+
+#titulo {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 32px;
+}

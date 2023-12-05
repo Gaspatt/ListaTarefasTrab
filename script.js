@@ -34,6 +34,7 @@ listaTarefas.addEventListener("click", function (e) {
     }
 });
 
+
 listaFinalizadas.addEventListener("click", function (e) {
     if (e.target.classList.contains("excluir")) {
         e.target.parentElement.remove()
