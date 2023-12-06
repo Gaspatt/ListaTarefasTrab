@@ -13,7 +13,7 @@ function adicionarTarefa() {
     if (tarefaTexto.trim() !== "") {
         const novaTarefa = document.createElement("li");
         novaTarefa.innerHTML = `
-          ${tarefaTexto} <button class="excluir">Excluir</button> <button class="finalizar">Finalizar</button>
+          ${tarefaTexto} <button class="excluir">\u00D7</button> <button class="finalizar">\&#10004</button>
       `;
         listaTarefas.appendChild(novaTarefa);
         tarefaInput.value = "";
@@ -28,7 +28,7 @@ listaTarefas.addEventListener("click", function (e) {
     if (e.target.classList.contains("finalizar")) {
         const tarefa = e.target.parentElement;
         const tarefaTexto = tarefa.innerText.split(" ")[0];
-        tarefa.innerHTML = `${tarefaTexto} <button class="excluir">Excluir</button>`;
+        tarefa.innerHTML = `${tarefaTexto}<button class="excluir">\u00D7</button>`;
         tarefa.style.color = 'green';
         listaFinalizadas.appendChild(tarefa);
     }

@@ -1,17 +1,45 @@
-#adicionar {
-  background-color: #3f34db;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-left: 10px;
+body {
+    background-color: #e9ebee;
 }
 
 
-#adicionar:hover {
-  background-color: #2d259b;
+#adicionar {
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+
+}
+
+
+
+.finalizar {
+  background-color: transparent;
+  border: none;
+  padding: 6px 10px 6px 10px;
+  color: #36bb72;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.finalizar:hover {
+  background-color: #41a16c;
+  color: #ffff;
+}
+
+.excluir {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  color: #fc4b15; 
+  cursor: pointer;
+  padding: 6px 10px 6px 10px;
+  margin-left: 3px;
+}
+
+.excluir:hover {
+  background-color: #f44336;
+  color: white;
 }
 
 #titulo {
@@ -20,3 +48,52 @@
   letter-spacing: 1.5px;
   line-height: 32px;
 }
+
+.lista-tarefas {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+#tarefa {
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  min-height: 40px;
+  width: 80%;
+
+  padding-left: 5%;
+  
+}
+
+h2 {
+  color: #333;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  border-bottom: 2px solid black;
+  display: block;
+  width: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #e4e4e4;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+ }
+ 
+ li:hover {
+  background-color: #d4d4d4;
+  color: #333;
+  transition:  0.3s ease;
+ }
+
