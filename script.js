@@ -10,11 +10,16 @@ tarefaInput.addEventListener("keypress", function (e) {
 });
 function adicionarTarefa() {
     const tarefaTexto = tarefaInput.value;
+    const data = new Date();
+    const tempo = data.toLocaleDateString();
+
     if (tarefaTexto.trim() !== "") {
         const novaTarefa = document.createElement("li");
         novaTarefa.innerHTML = `
-          ${tarefaTexto} <button class="excluir">\u00D7</button> <button class="finalizar">\&#10004</button>
+          ${tarefaTexto} - Adicionado às <span class="hora">${tempo}</span> <button class="excluir">\u00D7</button> <button class="finalizar">\&#10004</button>
       `;
+        const hora = novaTarefa.querySelector(".hora");
+        hora.style.color = 'blue';
         listaTarefas.appendChild(novaTarefa);
         tarefaInput.value = "";
 
@@ -28,8 +33,12 @@ listaTarefas.addEventListener("click", function (e) {
     if (e.target.classList.contains("finalizar")) {
         const tarefa = e.target.parentElement;
         const tarefaTexto = tarefa.innerText.split(" ")[0];
-        tarefa.innerHTML = `${tarefaTexto}<button class="excluir">\u00D7</button>`;
+        const data = new Date();
+        const tempo = data.toLocaleDateString();
+        tarefa.innerHTML = `${tarefaTexto} - Concluido às <span class="hora">${tempo}</span> <button class="excluir">\u00D7</button>`;
+        const hora = tarefa.querySelector(".hora");
         tarefa.style.color = 'green';
+        hora.style.color = 'blue';
         listaFinalizadas.appendChild(tarefa);
     }
 });

@@ -1,16 +1,18 @@
-body {
-    background-color: #e9ebee;
-}
-
 
 #adicionar {
   border: none;
   cursor: pointer;
   margin-left: 10px;
   transition: 0.3s;
-
+  background-color: transparent;
+  position: absolute;
+  margin-top: 8px;
 }
 
+#adicionar:hover {
+  transform: rotate(90deg);
+
+}
 
 
 .finalizar {
@@ -31,10 +33,10 @@ body {
   background-color: transparent;
   border: none;
   font-size: 16px;
-  color: #fc4b15; 
+  color: #fc4b15;
   cursor: pointer;
   padding: 6px 10px 6px 10px;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 .excluir:hover {
@@ -50,34 +52,30 @@ body {
 }
 
 .lista-tarefas {
-  border: 1px solid #ccc;
+  border: 1px solid #979797;
   border-radius: 5px;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f3f3f3;
 }
 
 #tarefa {
   margin-bottom: 10px;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
+  border: 1.5px solid rgb(145, 145, 145);
   border-radius: 5px;
   min-height: 40px;
-  width: 80%;
-
+  width: 85%;
   padding-left: 5%;
-  
 }
 
 h2 {
   color: #333;
-  display: inline-block;
+  font-size: 23pt;
+  text-decoration: underline;
+  text-align: center;
 }
 
-h2::after {
-  content: '';
-  border-bottom: 2px solid black;
-  display: block;
-  width: auto;
-}
+
 
 ul {
   list-style-type: none;
@@ -89,11 +87,10 @@ li {
   margin: 5px 0;
   padding: 10px;
   border-radius: 10px;
- }
- 
- li:hover {
+}
+
+li:hover {
   background-color: #d4d4d4;
   color: #333;
-  transition:  0.3s ease;
- }
-
+  transition: 0.3s ease;
+}
