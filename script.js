@@ -16,7 +16,7 @@ function adicionarTarefa() {
     if (tarefaTexto.trim() !== "") {
         const novaTarefa = document.createElement("li");
         novaTarefa.innerHTML = `
-          ${tarefaTexto} - Adicionado às <span class="hora">${tempo}</span> <button class="excluir">\u00D7</button> <button class="finalizar">\&#10004</button>
+          ${tarefaTexto} - Adicionado em <span class="hora">${tempo}</span> <button class="excluir">\u00D7</button> <button class="finalizar">\&#10004</button>
       `;
         const hora = novaTarefa.querySelector(".hora");
         hora.style.color = 'blue';
@@ -35,7 +35,7 @@ listaTarefas.addEventListener("click", function (e) {
         const tarefaTexto = tarefa.innerText.split(" ")[0];
         const data = new Date();
         const tempo = data.toLocaleDateString();
-        tarefa.innerHTML = `${tarefaTexto} - Concluido às <span class="hora">${tempo}</span> <button class="excluir">\u00D7</button>`;
+        tarefa.innerHTML = `${tarefaTexto} - Concluido em <span class="hora">${tempo}</span> <button class="excluir">\u00D7</button>`;
         const hora = tarefa.querySelector(".hora");
         tarefa.style.color = 'green';
         hora.style.color = 'blue';
